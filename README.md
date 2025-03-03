@@ -8,10 +8,10 @@ A library of rendering HTML elements for JavaScript.
 
 ### CDN
 
-URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.js
+URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs
 
 ```html
-<script src="https://cdn.yoneyo.com/scripts/render-v1.0.0.js"></script>
+<script src="https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs"></script>
 ```
 
 ## License
