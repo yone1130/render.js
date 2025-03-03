@@ -1,5 +1,5 @@
 
-import { Render } from '../src/render.mjs';
+import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
 
 
 const render = new Render();
