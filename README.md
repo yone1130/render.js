@@ -37,7 +37,7 @@ const app = () => {
                 id: "title",
                 innerText: title,
             }),
-            render.#p({
+            render.$p({
                 id: "message",
                 innerText: message,
             });
@@ -50,6 +50,8 @@ render.build({
     children: app(),
 });
 ```
+
+**More example codes is in [examples/](./examples/).**
 
 ## License
 
