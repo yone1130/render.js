@@ -30,19 +30,21 @@ const app = () => {
     let title = "render.js";
     let message = "Hello World";
 
-    return render.$div({
-        id: "app",
-        children: [
-            render.$h1({
-                id: "title",
-                innerText: title,
-            }),
-            render.$p({
-                id: "message",
-                innerText: message,
-            }),
-        ],
-    });
+    return [
+        render.$div({
+            id: "app",
+            children: [
+                render.$h1({
+                    id: "title",
+                    innerText: title,
+                }),
+                render.$p({
+                    id: "message",
+                    innerText: message,
+                }),
+            ],
+        }),
+    ];
 };
 
 render.build({
@@ -51,7 +53,10 @@ render.build({
 });
 ```
 
-**More example codes is in [examples/](./examples/).**
+### More Resources
+
+- **More documents are at https://render-js.yoneyo.com/ .**
+- **More example codes are in [examples/](./examples/).**
 
 ## License
 
