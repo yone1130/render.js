@@ -25,11 +25,11 @@ export class Render {
         const target = options.target;
         const children = options.children;
 
-        if (!target instanceof Element) {
-            throw new Error("options.target argument must be an Element instance.");
+        if (!(target instanceof window.Element)) {
+            throw new Error("options.target argument must be an window.Element instance.");
         }
 
-        if (!children instanceof Array) {
+        if (!(children instanceof Array)) {
             throw new Error("options.children argument must be an Array instance.");
         }
 
@@ -160,6 +160,139 @@ export class Render {
     }
 
 
+    $h1(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h1 = new H1({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h1;
+    }
+
+
+    $h2(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h2 = new H2({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h2;
+    }
+
+
+    $h3(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h3 = new H3({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h3;
+    }
+
+
+    $h4(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h4 = new H4({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h4;
+    }
+
+
+    $h5(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h5 = new H5({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h5;
+    }
+
+
+    $h6(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let h6 = new H6({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return h6;
+    }
+
+
+    $p(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const children = options.children || [];
+
+        let p = new P({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            children: children,
+        });
+
+        return p;
+    }
+
+
     $a(options) {
         const id = options.id || "";
         const className = options.className || "";
@@ -283,6 +416,69 @@ class Li extends Element {
         super(options);
         const li = this.create("li");
         return li;
+    }
+}
+
+
+class H1 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h1");
+        return h1;
+    }
+}
+
+
+class H2 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h2");
+        return h1;
+    }
+}
+
+
+class H3 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h3");
+        return h1;
+    }
+}
+
+
+class H4 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h4");
+        return h1;
+    }
+}
+
+
+class H5 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h5");
+        return h1;
+    }
+}
+
+
+class H6 extends Element {
+    constructor(options) {
+        super(options);
+        const h1 = this.create("h6");
+        return h1;
+    }
+}
+
+
+class P extends Element {
+    constructor(options) {
+        super(options);
+        const p = this.create("p");
+        return p;
     }
 }
 
