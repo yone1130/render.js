@@ -48,15 +48,42 @@ export class Render {
     $div(options) {
         const id = options.id || "";
         const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const innerHTML = options.innerHTML;
         const children = options.children || [];
 
         let div = new Div({
             id: id,
             className: className,
+            onClick: onClick,
+            innerText: innerText,
+            innerHTML: innerHTML,
             children: children,
         });
 
         return div;
+    }
+
+
+    $section(options) {
+        const id = options.id || "";
+        const className = options.className || "";
+        const onClick = options.onClick;
+        const innerText = options.innerText || "";
+        const innerHTML = options.innerHTML;
+        const children = options.children || [];
+
+        let section = new Section({
+            id: id,
+            className: className,
+            onClick: onClick,
+            innerText: innerText,
+            innerHTML: innerHTML,
+            children: children,
+        });
+
+        return section;
     }
 
 
@@ -362,6 +389,15 @@ class Div extends Element {
         super(options);
         const div = this.create("div");
         return div;
+    }
+}
+
+
+class Section extends Element {
+    constructor(options) {
+        super(options);
+        const section = this.create("section");
+        return section;
     }
 }
 
