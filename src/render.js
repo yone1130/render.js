@@ -10,7 +10,17 @@
  * 
  */
 
+
 export class Render {
+    constructor() {
+        this.version = new Version({
+            major: 1,
+            minor: 0,
+            patch: 0,
+            level: Version.dev,
+        });
+    }
+
     build(options) {
         const target = options.target;
         const children = options.children;
@@ -282,5 +292,39 @@ class A extends Element {
         super(options);
         const a = this.create("a");
         return a;
+    }
+}
+
+
+class Version {
+    constructor(version) {
+        this.major = version.major;
+        this.minor = version.minor;
+        this.patch = version.patch;
+        this.level = version.level;
+    }
+
+
+    get string() {
+        switch (this.level) {
+            case Version.levels.stable:
+                return `${this.major}.${this.minor}.${this.patch}`;
+
+            case Version.levels.beta:
+                return `${this.major}.${this.minor}.${this.patch} (beta)`;
+
+            case Version.levels.dev:
+                return `${this.major}.${this.minor}.${this.patch} (dev)`;
+
+            default:
+                return `${this.major}.${this.minor}.${this.patch}`;
+        }
+    }
+
+
+    static levels = {
+        stable: "stable",
+        beta: "beta",
+        dev: "dev",
     }
 }
