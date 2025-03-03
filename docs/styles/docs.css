@@ -13,9 +13,13 @@
 */
 
 :root {
-    --font-size: 16px;
+    --bgcolor: #101018;
+    --font-family: "Noto Sans JP", sans-serif;
+    --font-size: 20px;
     --font-weight: 400;
+    --font-style: normal;
     --line-height: 1.5em;
+    --color: #e0e0e0;
 }
 
 * {
@@ -24,8 +28,68 @@
 }
 
 body {
-    font-family: sans-serif;
+    min-height: 100dvh;
+    background-color: var(--bgcolor);
+    font-family: var(--font-family);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
+    font-style: var(--font-style);
     line-height: var(--line-height);
+    color: var(--color);
+}
+
+.root {
+    --padding-top-bottom: 4rem;
+    --padding-left-right: 1rem;
+    
+    width: calc(100dvw - var(--padding-left-right) * 2);
+    min-height: calc(100dvh - var(--padding-top-bottom) * 2);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    padding: var(--padding-top-bottom) var(--padding-left-right);
+}
+
+.page {
+    width: calc(100%);
+    height: calc(100%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.section {
+    width: calc(100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.about {
+    text-align: center;
+}
+
+.description {
+    border-radius: 100vw;
+    border: 1px solid var(--color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
 }

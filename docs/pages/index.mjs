@@ -17,20 +17,41 @@ const render = new Render();
 const root = document.getElementById("root");
 
 
-const app = () => {
+const page = () => {
     let title = "render.js";
 
     return [
         render.$div({
-            id: "app",
+            id: "page",
+            className: "page",
             children: [
-                render.$h1({
-                    id: "title",
-                    innerText: title,
+                render.$section({
+                    className: "section",
+                    children: [
+                        render.$h1({
+                            id: "title",
+                            className: "title section__title",
+                            innerText: title,
+                        }),
+                        render.$p({
+                            id: "about",
+                            className: "about",
+                            innerText: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
+                        }),
+                    ]
                 }),
-                render.$p({
-                    id: "about",
-                    innerText: "Welcome to render.js Documents! reder.js is a library of rendering HTML elements for JavaScript.",
+                render.$section({
+                    className: "section",
+                    children: [
+                        /* render.$h2({
+                            className: "title section__title",
+                            innerText: title,
+                        }),*/
+                        render.$p({
+                            className: "description",
+                            innerText: "In preparation, Comming soon.",
+                        }),
+                    ]
                 }),
             ],
         }),
@@ -40,5 +61,5 @@ const app = () => {
 
 render.build({
     target: root,
-    children: app(),
+    children: page(),
 });
