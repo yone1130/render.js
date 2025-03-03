@@ -40,8 +40,8 @@ const app = () => {
             render.$p({
                 id: "message",
                 innerText: message,
-            });
-        ]
+            }),
+        ],
     });
 };
 
