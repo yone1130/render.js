@@ -17,7 +17,22 @@ const render = new Render();
 const root = document.getElementById("root");
 
 
-const page = () => {
+function page() {
+    const locationUrl = new URL(location.href);
+    const pathname = locationUrl.pathname;
+    const pathList = locationUrl.pathname.split("/");
+
+    switch (pathname) {
+        case "/":
+            return top();
+
+        default:
+            return notFound();
+    }
+}
+
+
+function top() {
     let title = "render.js";
 
     return [
@@ -43,10 +58,6 @@ const page = () => {
                 render.$section({
                     className: "section",
                     children: [
-                        /* render.$h2({
-                            className: "title section__title",
-                            innerText: title,
-                        }),*/
                         render.$p({
                             className: "description",
                             innerText: "In preparation, Comming soon.",
@@ -56,7 +67,34 @@ const page = () => {
             ],
         }),
     ];
-};
+}
+
+
+function notFound() {
+    return [
+        render.$div({
+            id: "page",
+            className: "page",
+            children: [
+                render.$section({
+                    className: "section",
+                    children: [
+                        render.$h1({
+                            id: "title",
+                            className: "title section__title",
+                            innerText: "Not Found",
+                        }),
+                        render.$p({
+                            id: "description",
+                            className: "description",
+                            innerText: "The requested page was not found.",
+                        }),
+                    ]
+                }),
+            ],
+        }),
+    ];
+}
 
 
 render.build({
