@@ -95,47 +95,39 @@ export class Render {
         className,
         src,
         alt,
-    }) {
+    } = {}) {
         return new Image({
-            id: id,
-            className: className,
-            src: src,
-            alt: alt,
+            id,
+            className,
+            src,
+            alt,
         });
     }
 
 
-    $button(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let button = new Button({
+    $button({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    } = {}) {
+        return new Button({
             id: id,
             className: className,
             onClick: onClick,
             innerText: innerText,
             children: children,
         });
-
-        return button;
     }
 
 
-    $nav(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const children = options.children || [];
-
-        let nav = new Nav({
-            id: id,
-            className: className,
-            children: children,
+    $nav({ id, className, children }) {
+        return new Nav({
+            id,
+            className,
+            children,
         });
-
-        return nav;
     }
 
 
