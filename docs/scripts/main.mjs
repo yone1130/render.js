@@ -11,6 +11,7 @@
  */
 
 import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
+import { examples } from '/scripts/pages/examples.mjs';
 
 
 const render = new Render();
@@ -25,6 +26,9 @@ function page() {
     switch (pathname) {
         case "/":
             return top();
+
+        case "/examples/":
+            return examples();
 
         default:
             return notFound();
@@ -58,9 +62,11 @@ function top() {
                 render.$section({
                     className: "section",
                     children: [
-                        render.$p({
+                        render.$a({
                             className: "description",
-                            innerText: "In preparation, Comming soon.",
+                            href: "/examples/",
+                            innerText: "View Demos →",
+                            onClick: (event) => onClickLink(event),
                         }),
                     ]
                 }),
@@ -91,9 +97,30 @@ function notFound() {
                         }),
                     ]
                 }),
+                render.$section({
+                    className: "section",
+                    children: [
+                        render.$a({
+                            href: "/",
+                            innerText: "Back to Top",
+                            onClick: (event) => onClickLink(event),
+                        }),
+                    ],
+                }),
             ],
         }),
     ];
+}
+
+
+function onClickLink(event) {
+    const targetPathname = event.target.pathname;
+    event.preventDefault();
+    history.pushState(null, '', targetPathname);
+    render.build({
+        target: root,
+        children: page(),
+    });
 }
 
 
