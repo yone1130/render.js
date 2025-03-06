@@ -21,27 +21,18 @@ export class Render {
         });
     }
 
-    build(options) {
-        const target = options.target;
-        const children = options.children;
-
-        if (!(target instanceof window.Element)) {
-            throw new Error("options.target argument must be an window.Element instance.");
+    build({ target, children }) {
+        if (!(target instanceof Element)) {
+            throw new Error("Invalid argument: 'target' must be an instance of Element.");
         }
 
-        if (!(children instanceof Array)) {
-            throw new Error("options.children argument must be an Array instance.");
+        if (!Array.isArray(children) || !children.every(child => child instanceof Element)) {
+            throw new Error("Invalid argument: 'children' must be an array of Element instances.");
         }
 
-        target.innerHTML = "";
+        while (target.firstChild) target.firstChild.remove();
 
-        for (let child of children) {
-            if (!child instanceof Element) {
-                throw new Error("options.children argument must be an Array of Element instances.");
-            }
-
-            target.appendChild(child);
-        }
+        target.append(...children);
     }
 
 
