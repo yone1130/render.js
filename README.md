@@ -55,8 +55,9 @@ render.build({
 
 ### More Resources
 
-- **More documents are at https://render-js.yoneyo.com/ .**
-- **More example codes are in [examples/](./examples/).**
+- **Documents: https://render-js.yoneyo.com/ .**
+- **Demos: https://render-js.yoneyo.com/examples/ .**
+- **Example codes: [examples/](./examples/).**
 
 ## License
 
