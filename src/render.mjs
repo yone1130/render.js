@@ -21,6 +21,7 @@ export class Render {
         });
     }
 
+    
     build({ target, children }) {
         if (!(target instanceof Element)) {
             throw new Error("Invalid argument: 'target' must be an instance of Element.");
@@ -36,79 +37,71 @@ export class Render {
     }
 
 
-    $div(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const innerHTML = options.innerHTML;
-        const children = options.children || [];
-
-        let div = new Div({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            innerHTML: innerHTML,
-            children: children,
+    $div({
+        id,
+        className,
+        onClick,
+        innerText,
+        innerHTML,
+        children = [],
+    } = {}) {
+        return new Div({
+            id,
+            className,
+            onClick,
+            innerText,
+            innerHTML,
+            children
         });
-
-        return div;
     }
 
 
-    $section(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const innerHTML = options.innerHTML;
-        const children = options.children || [];
-
-        let section = new Section({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            innerHTML: innerHTML,
-            children: children,
+    $section({
+        id,
+        className,
+        onClick,
+        innerText,
+        innerHTML,
+        children = [],
+    } = {}) {
+        return Section({
+            id,
+            className,
+            onClick,
+            innerText,
+            innerHTML,
+            children,
         });
-
-        return section;
     }
 
 
-    $span(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const innerText = options.innerText || "";
-        const innerHTML = options.innerHTML;
-
-        let span = new Span({
-            id: id,
-            className: className,
-            innerText: innerText,
-            innerHTML: innerHTML,
+    $span({
+        id,
+        className,
+        innerText,
+        innerHTML,
+    } = {}) {
+        return new Span({
+            id,
+            className,
+            innerText,
+            innerHTML,
         });
-
-        return span;
     }
 
 
-    $img(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const src = options.src || "";
-        const alt = options.alt || "";
-
-        let img = new Image({
+    $img({
+        id,
+        className,
+        src,
+        alt,
+    }) {
+        return new Image({
             id: id,
             className: className,
             src: src,
             alt: alt,
         });
-
-        return img;
     }
 
 
