@@ -2,7 +2,7 @@
 
 ## Overview
 
-A library of rendering HTML elements for JavaScript.
+**render.js** is a library of rendering HTML elements for JavaScript.
 
 ## Usage
 
