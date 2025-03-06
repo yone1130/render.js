@@ -30,7 +30,7 @@ export class Render {
             throw new Error("Invalid argument: 'children' must be an array of Element instances.");
         }
 
-        while (target.firstChild) target.firstChild.remove();
+        target.innerHTML = "";
 
         target.append(...children);
     }
