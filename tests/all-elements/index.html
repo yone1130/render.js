@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./all-elements.css">
 
     <!-- Scripts -->
-    <script src="./all-elements.mjs" type="module"></script>
+    <script src="./all-elements.mjs" type="module" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RX1CVWDCD0"></script>
@@ -43,7 +43,30 @@
 </head>
 
 <body>
-    <div id="root" class="root"></div>
+    <div id="test" class="test">
+        <div id="testControl" class="test__item test-control">
+            <h2 class="test__label">Control</h2>
+
+            <div class="test-control__components-wrapper">
+                <button id="allButton" class="button test-control__button">
+                    <span class="button__text test-control__button-text">
+                        Rendering All Elements
+                    </span>
+                </button>
+
+                <button id="loopButton" class="button test-control__button">
+                    <span class="button__text test-control__button-text">
+                        Start Rendering Loop
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div id="ground" class="test__item ground">
+            <h2 class="test__label">Result</h2>
+            <div id="root" class="root"></div>
+        </div>
+    </div>
 </body>
 
 </html>
