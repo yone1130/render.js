@@ -11,6 +11,6 @@
         [tests]
         When you run `/tests/`, use this.
     */
-    "livePreview.serverRoot": "/tests/",
-    "liveServer.settings.root": "/tests/",
+    "livePreview.serverRoot": "/",
+    "liveServer.settings.root": "/",
 }
