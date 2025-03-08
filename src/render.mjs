@@ -23,12 +23,12 @@ export class Render {
 
 
     build({ target, children }) {
-        if (!(target instanceof Element)) {
-            throw new Error("Invalid argument: 'target' must be an instance of Element.");
+        if (!(target instanceof window.Element)) {
+            throw new Error(`Invalid argument: 'target' must be an instance of window.Element: target is ${Object.prototype.toString.call(target)}`);
         }
 
-        if (!Array.isArray(children) || !children.every(child => child instanceof Element)) {
-            throw new Error("Invalid argument: 'children' must be an array of Element instances.");
+        if (!Array.isArray(children) || !children.every(child => child instanceof window.Element)) {
+            throw new Error(`Invalid argument: 'children' must be an array of window.Element instances: children is ${Object.prototype.toString.call(children)}`);
         }
 
         target.innerHTML = "";
@@ -64,7 +64,7 @@ export class Render {
         innerHTML,
         children = [],
     }) {
-        return Section({
+        return new Section({
             id,
             className,
             onClick,
@@ -95,12 +95,16 @@ export class Render {
         className,
         src,
         alt,
+        width,
+        height,
     }) {
         return new Image({
             id,
             className,
             src,
             alt,
+            width,
+            height,
         });
     }
 
@@ -110,31 +114,35 @@ export class Render {
         className,
         onClick,
         innerText,
+        innerHTML,
         children = [],
     }) {
         return new Button({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
-        });
-    }
-
-
-    $nav({ id, className, children }) {
-        return new Nav({
             id,
             className,
+            onClick,
+            innerText,
+            innerHTML,
             children,
         });
     }
 
 
-    $ul({ id, className, children }) {
+    $nav({ id, className, innerHTML, children }) {
+        return new Nav({
+            id,
+            className,
+            innerHTML,
+            children,
+        });
+    }
+
+
+    $ul({ id, className, innerHTML, children }) {
         return new Ul({
             id,
             className,
+            innerHTML,
             children,
         });
     }
@@ -144,12 +152,14 @@ export class Render {
         id,
         className,
         innerText,
+        innerHTML,
         children = [],
     }) {
         return new Li({
             id,
             className,
             innerText,
+            innerHTML,
             children,
         });
     }
@@ -172,7 +182,7 @@ export class Render {
     }
 
 
-    $h1({
+    $h2({
         id,
         className,
         onClick,
@@ -301,6 +311,8 @@ class Element {
         href,
         src,
         alt,
+        width,
+        height,
         onClick,
         innerText,
         children,
@@ -311,6 +323,8 @@ class Element {
         this.href = href;
         this.src = src;
         this.alt = alt;
+        this.width = width;
+        this.height = height;
         this.onClick = onClick;
         this.innerText = innerText;
         this.children = children;
@@ -351,11 +365,21 @@ class Element {
             this.element.alt = this.alt;
         }
 
+        if (typeof this.width === "number") {
+            this.element.width = this.width;
+        }
+
+        if (typeof this.height === "number") {
+            this.element.height = this.height;
+        }
+
         if (typeof this.onClick === "function") {
             this.element.addEventListener("click", this.onClick);
         }
 
-        this.element.append(...this.children);
+        if (Array.isArray(this.children) && this.children.every(child => child instanceof window.Element)) {
+            this.element.append(...this.children);
+        }
 
         return this.element;
     }
