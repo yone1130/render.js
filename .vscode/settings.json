@@ -1,5 +1,16 @@
 {
-    "livePreview.serverRoot": "/docs/",
-    "liveServer.settings.root": "/docs/",
+    /*
+        [docs]
+        When you run `/docs/`, use this.
+    */
+    // "livePreview.serverRoot": "/docs/",
+    // "liveServer.settings.root": "/docs/",
     "liveServer.settings.file": "/",
+
+    /*
+        [tests]
+        When you run `/tests/`, use this.
+    */
+    "livePreview.serverRoot": "/tests/",
+    "liveServer.settings.root": "/tests/",
 }
