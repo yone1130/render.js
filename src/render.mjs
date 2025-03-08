@@ -327,15 +327,32 @@ class Element {
             return this.element;
         }
 
-        this.element.id;
-        this.element.className = this.className;
-        this.element.innerText = this.innerText;
-        this.element.href = this.href;
-        this.element.src = this.src;
-        this.element.alt = this.alt;
+        if (typeof this.id === "string") {
+            this.element.id = this.id;
+        }
 
-        if (this.onClick) {
-            this.element.addEventListener("click", (event) => this.onClick(event));
+        if (typeof this.className === "string") {
+            this.element.className = this.className;
+        }
+
+        if (typeof this.innerText === "string") {
+            this.element.innerText = this.innerText;
+        }
+
+        if (typeof this.href === "string") {
+            this.element.href = this.href;
+        }
+
+        if (typeof this.src === "string") {
+            this.element.src = this.src;
+        }
+
+        if (typeof this.alt === "string") {
+            this.element.alt = this.alt;
+        }
+
+        if (typeof this.onClick === "function") {
+            this.element.addEventListener("click", this.onClick);
         }
 
         this.element.append(...this.children);
