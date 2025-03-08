@@ -21,7 +21,7 @@ export class Render {
         });
     }
 
-    
+
     build({ target, children }) {
         if (!(target instanceof Element)) {
             throw new Error("Invalid argument: 'target' must be an instance of Element.");
@@ -44,7 +44,7 @@ export class Render {
         innerText,
         innerHTML,
         children = [],
-    } = {}) {
+    }) {
         return new Div({
             id,
             className,
@@ -63,7 +63,7 @@ export class Render {
         innerText,
         innerHTML,
         children = [],
-    } = {}) {
+    }) {
         return Section({
             id,
             className,
@@ -80,7 +80,7 @@ export class Render {
         className,
         innerText,
         innerHTML,
-    } = {}) {
+    }) {
         return new Span({
             id,
             className,
@@ -95,7 +95,7 @@ export class Render {
         className,
         src,
         alt,
-    } = {}) {
+    }) {
         return new Image({
             id,
             className,
@@ -111,7 +111,7 @@ export class Render {
         onClick,
         innerText,
         children = [],
-    } = {}) {
+    }) {
         return new Button({
             id: id,
             className: className,
@@ -131,204 +131,190 @@ export class Render {
     }
 
 
-    $ul(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const children = options.children || [];
-
-        let ul = new Ul({
-            id: id,
-            className: className,
-            children: children,
+    $ul({ id, className, children }) {
+        return new Ul({
+            id,
+            className,
+            children,
         });
-
-        return ul;
     }
 
 
-    $li(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let li = new Li({
-            id: id,
-            className: className,
-            innerText: innerText,
-            children: children,
+    $li({
+        id,
+        className,
+        innerText,
+        children = [],
+    }) {
+        return new Li({
+            id,
+            className,
+            innerText,
+            children,
         });
-
-        return li;
     }
 
 
-    $h1(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h1 = new H1({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h1({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H1({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h1;
     }
 
 
-    $h2(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h2 = new H2({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h1({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H2({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h2;
     }
 
 
-    $h3(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h3 = new H3({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h3({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H3({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h3;
     }
 
 
-    $h4(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h4 = new H4({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h4({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H4({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h4;
     }
 
 
-    $h5(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h5 = new H5({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h5({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H5({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h5;
     }
 
 
-    $h6(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let h6 = new H6({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $h6({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new H6({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return h6;
     }
 
 
-    $p(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let p = new P({
-            id: id,
-            className: className,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $p({
+        id,
+        className,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new P({
+            id,
+            className,
+            onClick,
+            innerText,
+            children,
         });
-
-        return p;
     }
 
 
-    $a(options) {
-        const id = options.id || "";
-        const className = options.className || "";
-        const href = options.href || "";
-        const onClick = options.onClick;
-        const innerText = options.innerText || "";
-        const children = options.children || [];
-
-        let a = new A({
-            id: id,
-            className: className,
-            href: href,
-            onClick: onClick,
-            innerText: innerText,
-            children: children,
+    $a({
+        id,
+        className,
+        href,
+        onClick,
+        innerText,
+        children = [],
+    }) {
+        return new A({
+            id,
+            className,
+            href,
+            onClick,
+            innerText,
+            children,
         });
-
-        return a;
     }
 }
 
 
 class Element {
-    constructor(options) {
-        this.id = options.id || "";
-        this.className = options.className || "";
-        this.href = options.href || "";
-        this.src = options.src || "";
-        this.alt = options.alt || "";
-        this.onClick = options.onClick;
-        this.innerText = options.innerText || "";
-        this.children = options.children || [];
-        this.innerHTML = options.innerHTML;
+    constructor({
+        id,
+        className,
+        href,
+        src,
+        alt,
+        onClick,
+        innerText,
+        children,
+        innerHTML,
+    }) {
+        this.id = id;
+        this.className = className;
+        this.href = href;
+        this.src = src;
+        this.alt = alt;
+        this.onClick = onClick;
+        this.innerText = innerText;
+        this.children = children;
+        this.innerHTML = innerHTML;
     }
 
 
@@ -341,12 +327,12 @@ class Element {
             return this.element;
         }
 
-        this.element.id = this.id || "";
+        this.element.id;
         this.element.className = this.className;
         this.element.innerText = this.innerText;
-        this.element.href = this.href || "";
-        this.element.src = this.src || "";
-        this.element.alt = this.alt || "";
+        this.element.href = this.href;
+        this.element.src = this.src;
+        this.element.alt = this.alt;
 
         if (this.onClick) {
             this.element.addEventListener("click", (event) => this.onClick(event));
