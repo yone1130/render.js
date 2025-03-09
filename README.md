@@ -59,6 +59,12 @@ render.build({
 - **Demos: https://render-js.yoneyo.com/examples/ .**
 - **Example codes: [examples/](./examples/).**
 
+## Build
+
+```bash
+npx tsc src/render.mts
+```
+
 ## License
 
 Licensed under the MIT License.
