@@ -50,12 +50,12 @@ function top() {
                         render.$h1({
                             id: "title",
                             className: "title section__title",
-                            innerText: title,
+                            textContent: title,
                         }),
                         render.$p({
                             id: "about",
                             className: "about",
-                            innerText: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
+                            textContent: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
                         }),
                     ]
                 }),
@@ -65,7 +65,7 @@ function top() {
                         render.$a({
                             className: "description",
                             href: "/examples/",
-                            innerText: "View Demos →",
+                            textContent: "View Demos →",
                             onClick: (event) => onClickLink(event),
                         }),
                     ]
@@ -88,12 +88,12 @@ function notFound() {
                         render.$h1({
                             id: "title",
                             className: "title section__title",
-                            innerText: "Not Found",
+                            textContent: "Not Found",
                         }),
                         render.$p({
                             id: "description",
                             className: "description",
-                            innerText: "The requested page was not found.",
+                            textContent: "The requested page was not found.",
                         }),
                     ]
                 }),
@@ -102,7 +102,7 @@ function notFound() {
                     children: [
                         render.$a({
                             href: "/",
-                            innerText: "Back to Top",
+                            textContent: "Back to Top",
                             onClick: (event) => onClickLink(event),
                         }),
                     ],
