@@ -400,10 +400,10 @@ class A extends RenderElement {
 
 
 class Version {
-    major: Number;
-    minor: Number;
-    patch: Number;
-    level: String;
+    major: number;
+    minor: number;
+    patch: number;
+    level: string;
 
     constructor({ major, minor, patch, level }) {
         this.major = major;
