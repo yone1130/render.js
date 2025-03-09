@@ -27,12 +27,12 @@ allButton.addEventListener("click", () => {
 
 loopButton.addEventListener("click", () => {
     if (renderingInterval === null) {
-        loopButton.innerText = "Stop the Loop";
+        loopButton.textContent = "Stop the Loop";
     } else if (typeof renderingInterval === "number") {
         clearInterval(renderingInterval);
         renderingInterval = null;
         root.innerHTML = "";
-        loopButton.innerText = "Start Rendering Loop";
+        loopButton.textContent = "Start Rendering Loop";
         return;
     }
     buildLoop();
@@ -68,29 +68,29 @@ function component() {
                     id: "test_id_div",
                     className: "test_class",
                     onClick: () => console.debug("Clicked Div."),
-                    innerText: "[div]",
+                    textContent: "[div]",
                     innerHTML: "<span>[div-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[div-children]",
+                            textContent: "[div-children]",
                         }),
                     ],
                 }),
                 render.$span({
                     id: "test_id_span",
                     className: "test_class",
-                    innerText: "[span]",
+                    textContent: "[span]",
                     innerHTML: "<span>[span-innerHTML]</span>",
                 }),
                 render.$section({
                     id: "test_setion",
                     className: "test_class",
                     onClick: () => console.debug("Clicked Section."),
-                    innerText: "[section]",
+                    textContent: "[section]",
                     innerHTML: "<span>[section-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[section-children]",
+                            textContent: "[section-children]",
                         }),
                     ],
                 }),
@@ -106,11 +106,11 @@ function component() {
                     id: "test_id_button",
                     className: "test_class",
                     onClick: () => console.debug("Clicked Button."),
-                    innerText: "[button]",
+                    textContent: "[button]",
                     innerHTML: "<span>[button-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[button-children]",
+                            textContent: "[button-children]",
                         }),
                     ],
                 }),
@@ -120,7 +120,7 @@ function component() {
                     innerHTML: "<span>[nav-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[nav-children]",
+                            textContent: "[nav-children]",
                         }),
                     ],
                 }),
@@ -130,18 +130,18 @@ function component() {
                     innerHTML: "<span>[ul-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[ul-children]",
+                            textContent: "[ul-children]",
                         }),
                     ],
                 }),
                 render.$li({
                     id: "test_id_li",
                     className: "test_class",
-                    innerText: "[li]",
+                    textContent: "[li]",
                     innerHTML: "<span>[li-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[li-children]",
+                            textContent: "[li-children]",
                         }),
                     ],
                 }),
@@ -149,11 +149,11 @@ function component() {
                     id: "test_id_h1",
                     className: "test_class",
                     onClick: () => console.debug("Clicked H1."),
-                    innerText: "[h1]",
+                    textContent: "[h1]",
                     innerHTML: "<span>[h1-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[h1-children]",
+                            textContent: "[h1-children]",
                         }),
                     ],
                 }),
@@ -161,11 +161,11 @@ function component() {
                     id: "test_id_p",
                     className: "test_class",
                     onClick: () => console.debug("Clicked P."),
-                    innerText: "[p]",
+                    textContent: "[p]",
                     innerHTML: "<span>[p-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[p-children]",
+                            textContent: "[p-children]",
                         }),
                     ],
                 }),
@@ -174,11 +174,11 @@ function component() {
                     className: "test_class",
                     href: "#",
                     onClick: () => console.debug("Clicked A."),
-                    innerText: "[a]",
+                    textContent: "[a]",
                     innerHTML: "<span>[a-innerHTML]</span>",
                     children: [
                         render.$span({
-                            innerText: "[a-children]",
+                            textContent: "[a-children]",
                         }),
                     ],
                 }),
