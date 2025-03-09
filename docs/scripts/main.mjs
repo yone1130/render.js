@@ -11,12 +11,12 @@
  */
 
 import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
-import { examples } from '/scripts/pages/examples.mjs';
 
 
 const render = new Render();
 const root = document.getElementById("root");
 
+let pages = {};
 
 function page() {
     const locationUrl = new URL(location.href);
@@ -110,6 +110,16 @@ function notFound() {
             ],
         }),
     ];
+}
+
+
+function examples() {
+    if (pages.find("examples") {
+        return pages.examples;
+    } else {
+        const _examples = import('/scripts/pages/examples.mjs');
+        pages.examples = _examples.examples;
+    }
 }
 
 
