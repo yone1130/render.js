@@ -18,7 +18,7 @@ const root = document.getElementById("root");
 
 let pages = {};
 
-function page() {
+async function page() {
     const locationUrl = new URL(location.href);
     const pathname = locationUrl.pathname;
     const pathList = locationUrl.pathname.split("/");
@@ -28,7 +28,7 @@ function page() {
             return top();
 
         case "/examples/":
-            return examples();
+            return await examples();
 
         default:
             return notFound();
@@ -113,11 +113,11 @@ function notFound() {
 }
 
 
-function examples() {
-    if (pages.find("examples") {
+async function examples() {
+    if ("examples" in pages) {
         return pages.examples;
     } else {
-        const _examples = import('/scripts/pages/examples.mjs');
+        const _examples = await import('/scripts/pages/examples.mjs');
         pages.examples = _examples.examples;
     }
 }
@@ -129,12 +129,12 @@ function onClickLink(event) {
     history.pushState(null, '', targetPathname);
     render.build({
         target: root,
-        children: page(),
+        children: await page(),
     });
 }
 
 
 render.build({
     target: root,
-    children: page(),
+    children: await page(),
 });
