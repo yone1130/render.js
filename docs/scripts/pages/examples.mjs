@@ -61,13 +61,6 @@ class Navigation {
                             className: "navigation__tab-name",
                             textContent: tab.name,
                         }),
-                        (() => {
-                            if (tab.icon instanceof MaterialIcon) {
-                                return tab.icon;
-                            }
-
-                            return [];
-                        })(),
                     ],
                 })
             );
