@@ -27,11 +27,11 @@ const app = () => {
             children: [
                 render.$h1({
                     id: "title",
-                    innerText: title,
+                    textContent: title,
                 }),
                 render.$p({
                     id: "message",
-                    innerText: message,
+                    textContent: message,
                 }),
             ],
         }),
