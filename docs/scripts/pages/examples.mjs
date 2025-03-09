@@ -59,7 +59,7 @@ class Navigation {
                     children: [
                         render.$span({
                             className: "navigation__tab-name",
-                            innerText: tab.name,
+                            textContent: tab.name,
                         }),
                         (() => {
                             if (tab.icon instanceof MaterialIcon) {
@@ -116,7 +116,7 @@ class MaterialIcon {
     static icon(name) {
         return render.$span({
             className: "material-symbol-outlined",
-            innerText: name,
+            textContent: name,
         });
     }
 
@@ -176,13 +176,13 @@ function home() {
         id: "home",
         children: [
             render.$h1({
-                innerText: "Examples",
+                textContent: "Examples",
             }),
             render.$h2({
-                innerText: "Home",
+                textContent: "Home",
             }),
             render.$span({
-                innerText: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
             }),
         ],
     });
@@ -195,13 +195,13 @@ function demos() {
         id: "demos",
         children: [
             render.$h1({
-                innerText: "Examples",
+                textContent: "Examples",
             }),
             render.$h2({
-                innerText: "Demos",
+                textContent: "Demos",
             }),
             render.$span({
-                innerText: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
             }),
         ],
     });
@@ -214,13 +214,13 @@ function menu() {
         id: "menu",
         children: [
             render.$h1({
-                innerText: "Examples",
+                textContent: "Examples",
             }),
             render.$h2({
-                innerText: "Menu",
+                textContent: "Menu",
             }),
             render.$span({
-                innerText: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
             }),
         ],
     });
