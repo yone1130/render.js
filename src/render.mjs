@@ -41,7 +41,7 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         innerHTML,
         children = [],
     }) {
@@ -49,7 +49,7 @@ export class Render {
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             innerHTML,
             children
         });
@@ -60,7 +60,7 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         innerHTML,
         children = [],
     }) {
@@ -68,7 +68,7 @@ export class Render {
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             innerHTML,
             children,
         });
@@ -78,13 +78,13 @@ export class Render {
     $span({
         id,
         className,
-        innerText,
+        textContent,
         innerHTML,
     }) {
         return new Span({
             id,
             className,
-            innerText,
+            textContent,
             innerHTML,
         });
     }
@@ -113,7 +113,7 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         innerHTML,
         children = [],
     }) {
@@ -121,7 +121,7 @@ export class Render {
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             innerHTML,
             children,
         });
@@ -151,14 +151,14 @@ export class Render {
     $li({
         id,
         className,
-        innerText,
+        textContent,
         innerHTML,
         children = [],
     }) {
         return new Li({
             id,
             className,
-            innerText,
+            textContent,
             innerHTML,
             children,
         });
@@ -169,14 +169,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H1({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -186,14 +186,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H2({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -203,14 +203,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H3({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -220,14 +220,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H4({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -237,14 +237,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H5({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -254,14 +254,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new H6({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -271,14 +271,14 @@ export class Render {
         id,
         className,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new P({
             id,
             className,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -289,7 +289,7 @@ export class Render {
         className,
         href,
         onClick,
-        innerText,
+        textContent,
         children = [],
     }) {
         return new A({
@@ -297,7 +297,7 @@ export class Render {
             className,
             href,
             onClick,
-            innerText,
+            textContent,
             children,
         });
     }
@@ -314,7 +314,7 @@ class Element {
         width,
         height,
         onClick,
-        innerText,
+        textContent,
         children,
         innerHTML,
     }) {
@@ -326,7 +326,7 @@ class Element {
         this.width = width;
         this.height = height;
         this.onClick = onClick;
-        this.innerText = innerText;
+        this.textContent = textContent;
         this.children = children;
         this.innerHTML = innerHTML;
     }
@@ -349,8 +349,8 @@ class Element {
             this.element.className = this.className;
         }
 
-        if (typeof this.innerText === "string") {
-            this.element.innerText = this.innerText;
+        if (typeof this.textContent === "string") {
+            this.element.textContent = this.textContent;
         }
 
         if (typeof this.href === "string") {
