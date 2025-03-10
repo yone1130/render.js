@@ -62,7 +62,7 @@ render.build({
 ## Build
 
 ```bash
-npx tsc src/render.mts
+npx tsc
 ```
 
 ## License
