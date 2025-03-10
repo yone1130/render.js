@@ -10,7 +10,7 @@
  * 
  */
 
-import { Render } from '../../src/render.mjs';
+import { Render } from '../../dist/render.mjs';
 
 
 const render = new Render();
