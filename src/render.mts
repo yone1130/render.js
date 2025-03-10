@@ -16,12 +16,7 @@ export class Render {
 
 
     constructor() {
-        this.version = new Version({
-            major: 1,
-            minor: 0,
-            patch: 0,
-            level: Version.levels.dev,
-        });
+        this.version = new Version(1, 0, 0, Version.levels.dev);
     }
 
 
@@ -114,7 +109,7 @@ export class Render {
 
 class RenderElement {
     options: ElementOptions;
-    element: HTMLElement;
+    element?: HTMLElement;
 
 
     constructor(options: ElementOptions) {
@@ -405,7 +400,12 @@ class Version {
     patch: number;
     level: string;
 
-    constructor({ major, minor, patch, level }) {
+    constructor(
+        major: number,
+        minor: number,
+        patch: number,
+        level: string
+    ) {
         this.major = major;
         this.minor = minor;
         this.patch = patch;
