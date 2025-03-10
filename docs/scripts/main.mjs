@@ -122,8 +122,7 @@ async function examples() {
     }
 }
 
-
-function onClickLink(event) {
+async function onClickLink(event) {
     const targetPathname = event.target.pathname;
     event.preventDefault();
     history.pushState(null, '', targetPathname);
