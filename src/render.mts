@@ -26,83 +26,83 @@ export class Render {
     }
 
 
-    $div(options: ElementOptions): Div {
-        return new Div(options);
+    $div(options: ElementOptions): HTMLElement {
+        return new Div(options).create();
     }
 
 
-    $section(options: ElementOptions): Section {
-        return new Section(options);
+    $section(options: ElementOptions): HTMLElement {
+        return new Section(options).create();
     }
 
 
-    $span(options: ElementOptions): Span {
-        return new Span(options);
+    $span(options: ElementOptions): HTMLElement {
+        return new Span(options).create();
     }
 
 
-    $img(options: ElementOptions): Image {
-        return new Image(options);
+    $img(options: ElementOptions): HTMLElement {
+        return new Image(options).create();
     }
 
 
-    $button(options: ElementOptions): Button {
-        return new Button(options);
+    $button(options: ElementOptions): HTMLElement {
+        return new Button(options).create();
     }
 
 
-    $nav(options: ElementOptions): Nav {
-        return new Nav(options);
+    $nav(options: ElementOptions): HTMLElement {
+        return new Nav(options).create();
     }
 
 
-    $ul(options: ElementOptions): Ul {
-        return new Ul(options);
+    $ul(options: ElementOptions): HTMLElement {
+        return new Ul(options).create();
     }
 
 
-    $li(options: ElementOptions): Li {
-        return new Li(options);
+    $li(options: ElementOptions): HTMLElement {
+        return new Li(options).create();
     }
 
 
-    $h1(options: ElementOptions): H1 {
-        return new H1(options);
+    $h1(options: ElementOptions): HTMLElement {
+        return new H1(options).create();
     }
 
 
-    $h2(options: ElementOptions): H2 {
-        return new H2(options);
+    $h2(options: ElementOptions): HTMLElement {
+        return new H2(options).create();
     }
 
 
-    $h3(options: ElementOptions): H3 {
-        return new H3(options);
+    $h3(options: ElementOptions): HTMLElement {
+        return new H3(options).create();
     }
 
 
-    $h4(options: ElementOptions): H4 {
-        return new H4(options);
+    $h4(options: ElementOptions): HTMLElement {
+        return new H4(options).create();
     }
 
 
-    $h5(options: ElementOptions): H5 {
-        return new H5(options);
+    $h5(options: ElementOptions): HTMLElement {
+        return new H5(options).create();
     }
 
 
-    $h6(options: ElementOptions): H6 {
-        return new H6(options);
+    $h6(options: ElementOptions): HTMLElement {
+        return new H6(options).create();
     }
 
 
-    $p(options: ElementOptions): P {
-        return new P(options);
+    $p(options: ElementOptions): HTMLElement {
+        return new P(options).create();
     }
 
 
-    $a(options: ElementOptions) {
-        return new A(options);
+    $a(options: ElementOptions): HTMLElement {
+        return new A(options).create();
     }
 }
 
