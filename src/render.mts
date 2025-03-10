@@ -20,7 +20,7 @@ export class Render {
     }
 
 
-    build(target: HTMLElement, children: Array<HTMLElement>): void {
+    build({target, children}: RenderArguments): void {
         target.innerHTML = "";
         target.append(...children);
     }
@@ -104,6 +104,12 @@ export class Render {
     $a(options: ElementOptions): HTMLElement {
         return new A(options).create();
     }
+}
+
+
+interface RenderArguments {
+    target: HTMLElement,
+    children: Array<HTMLElement>,
 }
 
 
