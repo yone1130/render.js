@@ -144,7 +144,7 @@ class RenderElement {
             this.element.textContent = this.options.textContent;
         }
 
-        if (this.element instanceof HTMLLinkElement && typeof this.options.href === "string") {
+        if (this.element instanceof HTMLAnchorElement && typeof this.options.href === "string") {
             this.element.href = this.options.href;
         }
 
