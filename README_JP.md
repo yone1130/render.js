@@ -10,16 +10,16 @@
 
 ### 1. CDNからインポートする
 
-URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs
+URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs
 
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
+import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs';
 ```
 
 または
 
 ```html
-<script src="https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs"></script>
+<script src="https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs"></script>
 ```
 
 ### 2. 使う

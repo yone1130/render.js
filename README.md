@@ -10,16 +10,16 @@
 
 ### 1. import from CDN
 
-URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs
+URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs
 
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
+import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs';
 ```
 
 or
 
 ```html
-<script src="https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs"></script>
+<script src="https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs"></script>
 ```
 
 ### 2. Use
