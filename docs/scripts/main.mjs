@@ -18,6 +18,12 @@ const root = document.getElementById("root");
 
 let pages = {};
 
+render.build({
+    target: root,
+    children: await page(),
+});
+
+
 async function page() {
     const locationUrl = new URL(location.href);
     const pathname = locationUrl.pathname;
@@ -114,13 +120,17 @@ function notFound() {
 
 
 async function examples() {
-    if ("examples" in pages) {
-        return pages.examples;
-    } else {
-        const _examples = await import('/scripts/pages/examples.mjs');
+    if (!("examples" in pages)) {
+        let _examples = await import('/scripts/pages/examples.mjs');
         pages.examples = _examples.examples;
     }
+
+    if (typeof pages.examples === "function") {
+        return pages.examples();
+    }
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
 
 async function onClickLink(event) {
     const targetPathname = event.target.pathname;
@@ -131,9 +141,3 @@ async function onClickLink(event) {
         children: await page(),
     });
 }
-
-
-render.build({
-    target: root,
-    children: await page(),
-});
