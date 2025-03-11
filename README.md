@@ -8,7 +8,7 @@
 
 ## Usage
 
-### 1. import from CDN
+### 1. Import from CDN
 
 URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs
 
@@ -80,6 +80,6 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 ## License
 
-Licensed under the MIT License.
+Licensed under the [MIT License](./LICENSE).
 
 Copyright (C) 2025 よね/Yone
