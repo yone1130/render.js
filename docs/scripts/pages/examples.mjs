@@ -25,7 +25,7 @@ export function examples() {
     ];
 }
 
-/* ----- */
+/* ---------------- */
 
 class Navigation {
     constructor({ router, body }) {
@@ -103,7 +103,7 @@ class Navigation {
     }
 }
 
-/* ----- */
+/* ---------------- */
 
 class MaterialIcon {
     static icon(name) {
@@ -129,7 +129,7 @@ class MaterialIcon {
     }
 }
 
-/* ----- */
+/* ---------------- */
 
 function app() {
     const navigation = new Navigation({
@@ -162,7 +162,7 @@ function app() {
     ];
 }
 
-/* ----- */
+/* ---------------- */
 
 function home() {
     return render.$div({
@@ -181,7 +181,7 @@ function home() {
     });
 }
 
-/* ----- */
+/* ---------------- */
 
 function demos() {
     return render.$div({
@@ -200,7 +200,7 @@ function demos() {
     });
 }
 
-/* ----- */
+/* ---------------- */
 
 function menu() {
     return render.$div({

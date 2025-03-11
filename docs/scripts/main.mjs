@@ -23,6 +23,7 @@ render.build({
     children: await page(),
 });
 
+/* ---------------- */
 
 async function page() {
     const locationUrl = new URL(location.href);
@@ -130,7 +131,7 @@ async function examples() {
     }
 }
 
-/* ---------------------------------------------------------------------------------------------------- */
+/* ---------------- */
 
 async function onClickLink(event) {
     const targetPathname = event.target.pathname;
