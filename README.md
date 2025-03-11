@@ -76,7 +76,7 @@ npm install typescript
 npx tsc
 ```
 
-Emitted JavaScript files will output at `dist/` directory.
+Emitted JavaScript files will be output to the `dist/` directory.
 
 ## License
 
