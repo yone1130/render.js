@@ -80,6 +80,6 @@ npx tsc
 
 ## License
 
-Licensed under the MIT License.
+[MIT License](./LICENSE) のもとでライセンスされます。
 
 Copyright (C) 2025 よね/Yone
