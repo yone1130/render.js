@@ -1,14 +1,14 @@
 # render.js
 
-[> 日本語で読む](./README_JP.md)
+[> Read in English](./README.md)
 
 ## Overview
 
-**render.js** is a library of rendering HTML elements for TypeScript and JavaScript.
+**render.js** は、TypeScript と JavaScript で利用できるHTMLレンダリングライブラリです。
 
-## Usage
+## 利用方法
 
-### 1. import from CDN
+### 1. CDNからインポートする
 
 URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs
 
@@ -16,15 +16,15 @@ URL: https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs
 import { Render } from 'https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs';
 ```
 
-or
+または
 
 ```html
 <script src="https://cdn.yoneyo.com/scripts/render-v1.0.0.mjs"></script>
 ```
 
-### 2. Use
+### 2. 使う
 
-A sample code:
+サンプルコード:
 ```js
 const render = new Render();
 const root = document.getElementById("root");
@@ -56,19 +56,19 @@ render.build({
 });
 ```
 
-### More Resources
+### リソース
 
-- **Documents: https://render-js.yoneyo.com/ .**
-- **Demos: https://render-js.yoneyo.com/examples/ .**
-- **Example codes: [examples/](./examples/).**
+- **ドキュメント: https://render-js.yoneyo.com/ .**
+- **ウェブデモ: https://render-js.yoneyo.com/examples/ .**
+- **サンプルコード: [examples/](./examples/).**
 
-## Build
+## ビルド
 
 ```bash
 npx tsc
 ```
 
-Emitted files will output at `dist/` directory.
+コンパイルされたJavaScriptファイルが `dist/` ディレクトリに出力されます。
 
 ## License
 
