@@ -64,6 +64,14 @@ render.build({
 
 ## ビルド
 
+### 1. TypeScript をインストールする
+
+```bash
+npm install typescript
+```
+
+### 2. JavaScript にコンパイルする
+
 ```bash
 npx tsc
 ```
