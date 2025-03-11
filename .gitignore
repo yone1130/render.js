@@ -1,5 +1,5 @@
 # node
-node_module
+node_module/
 
 # distribution
 dist/
