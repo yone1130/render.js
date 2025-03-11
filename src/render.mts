@@ -394,7 +394,7 @@ class A extends RenderElement {
 
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("p");
+        const element: HTMLElement = this._create("a");
         return element;
     }
 }
