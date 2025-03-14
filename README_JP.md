@@ -64,16 +64,18 @@ render.build({
 
 ## ビルド
 
-### 1. TypeScript をインストールする
+### 1. パッケージをインストールする
 
 ```bash
-npm install typescript
+npm install
 ```
 
-### 2. JavaScript にコンパイルする
+### 2. ビルド
+
+JavaScript にコンパイルします。
 
 ```bash
-npx tsc
+npm run build
 ```
 
 コンパイルされたJavaScriptファイルが `dist/` ディレクトリに出力されます。

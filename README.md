@@ -64,16 +64,18 @@ render.build({
 
 ## Build
 
-### 1. Install TypeScript
+### 1. Install Packages
 
 ```bash
-npm install typescript
+npm install
 ```
 
-### 2. Compile to JavaScript
+### 2. Build
+
+Compile to JavaScript.
 
 ```bash
-npx tsc
+npm run build
 ```
 
 Emitted JavaScript files will be output to the `dist/` directory.
