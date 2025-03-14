@@ -10,7 +10,7 @@
  * 
  */
 
-import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.min.mjs';
+import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs';
 
 const render = new Render();
 
