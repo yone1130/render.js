@@ -13,7 +13,7 @@
 import { RenderElement } from "./element.mjs";
 import { ElementOptions } from "./types/element-options.mjs";
 import { RenderArguments } from "./types/render-arguments.mjs";
-import { Version } from "version/src/version.mjs";
+import { Version } from "../node_modules/version/src/index.mjs";
 
 
 export class Render {
