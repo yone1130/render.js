@@ -20,5 +20,6 @@
         "typescript": "^5.8.2",
         "version": "github:yone1130/version"
     },
-    "type": "module"
+    "type": "module",
+    "moduleResolution": "node"
 }
