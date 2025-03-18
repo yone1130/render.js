@@ -1,4 +1,3 @@
-
 [> 日本語で読む](./README_JP.md)
 
 ## About this Directory
