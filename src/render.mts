@@ -10,6 +10,11 @@
  * 
  */
 
+import { RenderElement } from "./element.mjs";
+import { ElementOptions } from "./types/element-options.mjs";
+import { RenderArguments } from "./types/render-arguments.mjs";
+import { Version } from "../node_modules/version/src/index.mjs";
+
 
 export class Render {
     version: Version;
@@ -104,91 +109,6 @@ export class Render {
     $a(options: ElementOptions): HTMLElement {
         return new A(options).create();
     }
-}
-
-
-interface RenderArguments {
-    target: HTMLElement,
-    children: Array<HTMLElement>,
-}
-
-
-class RenderElement {
-    options: ElementOptions;
-    element?: HTMLElement;
-
-
-    constructor(options: ElementOptions) {
-        this.options = options;
-    }
-
-
-    _create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
-        this.element = document.createElement(tagName);
-
-        if (typeof this.options.innerHTML === "string") {
-            const html = document.createRange().createContextualFragment(this.options.innerHTML);
-            this.element.appendChild(html);
-            return this.element;
-        }
-
-        if (typeof this.options.id === "string") {
-            this.element.id = this.options.id;
-        }
-
-        if (typeof this.options.className === "string") {
-            this.element.className = this.options.className;
-        }
-
-        if (typeof this.options.textContent === "string") {
-            this.element.textContent = this.options.textContent;
-        }
-
-        if (this.element instanceof HTMLAnchorElement && typeof this.options.href === "string") {
-            this.element.href = this.options.href;
-        }
-
-        if (this.element instanceof HTMLImageElement && typeof this.options.src === "string") {
-            this.element.src = this.options.src;
-        }
-
-        if (this.element instanceof HTMLImageElement && typeof this.options.alt === "string") {
-            this.element.alt = this.options.alt;
-        }
-
-        if (this.element instanceof HTMLImageElement && typeof this.options.width === "number") {
-            this.element.width = this.options.width;
-        }
-
-        if (this.element instanceof HTMLImageElement && typeof this.options.height === "number") {
-            this.element.height = this.options.height;
-        }
-
-        if (this.options.onClick) {
-            this.element.addEventListener("click", this.options.onClick);
-        }
-
-        if (Array.isArray(this.options.children) && this.options.children.every(child => child instanceof HTMLElement)) {
-            this.element.append(...this.options.children);
-        }
-
-        return this.element;
-    }
-}
-
-
-interface ElementOptions {
-    id?: string,
-    className?: string,
-    href?: string | URL,
-    src?: string | URL,
-    alt?: string,
-    width?: number,
-    height?: number,
-    onClick?: (this: HTMLElement, ev: MouseEvent) => void,
-    textContent?: string,
-    children?: Array<HTMLElement>,
-    innerHTML?: string,
 }
 
 
@@ -396,49 +316,5 @@ class A extends RenderElement {
     create(): HTMLElement {
         const element: HTMLElement = this._create("a");
         return element;
-    }
-}
-
-
-class Version {
-    major: number;
-    minor: number;
-    patch: number;
-    level: string;
-
-    constructor(
-        major: number,
-        minor: number,
-        patch: number,
-        level: string
-    ) {
-        this.major = major;
-        this.minor = minor;
-        this.patch = patch;
-        this.level = level;
-    }
-
-
-    get string(): String {
-        switch (this.level) {
-            case Version.levels.stable:
-                return `${this.major}.${this.minor}.${this.patch}`;
-
-            case Version.levels.beta:
-                return `${this.major}.${this.minor}.${this.patch} (beta)`;
-
-            case Version.levels.dev:
-                return `${this.major}.${this.minor}.${this.patch} (dev)`;
-
-            default:
-                return `${this.major}.${this.minor}.${this.patch}`;
-        }
-    }
-
-
-    static levels = {
-        stable: "stable",
-        beta: "beta",
-        dev: "dev",
     }
 }
