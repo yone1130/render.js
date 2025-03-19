@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Build - Compile TypeScript",
+            "command": "npm run build",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "Start Docs - Start Docs Server",
+            "command": "npm run start-docs",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "Start Test - Start Test Server",
+            "command": "npm run start-test",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}
