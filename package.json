@@ -19,8 +19,8 @@
         "start-test": "http-server ./ -p 3001"
     },
     "dependencies": {
-        "version": "github:yone1130/version",
-        "typescript": "^5.8.2"
+        "typescript": "^5.8.2",
+        "version": "github:yone1130/version"
     },
     "devDependencies": {
         "http-server": "^14.1.1"
