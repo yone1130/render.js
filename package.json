@@ -14,11 +14,16 @@
     "homepage": "https://render-js.yoneyo.com",
     "main": "./src/render.mjs",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "start-docs": "http-server ./docs -p 3000",
+        "start-test": "http-server ./ -p 3001"
     },
     "dependencies": {
-        "typescript": "^5.8.2",
-        "version": "github:yone1130/version"
+        "version": "github:yone1130/version",
+        "typescript": "^5.8.2"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
     },
     "type": "module",
     "exports": {
