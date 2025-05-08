@@ -84,4 +84,4 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 Licensed under the [MIT License](./LICENSE).
 
-Copyright (C) 2025 よね/Yone
+Copyright &copy; 2025 よね/Yone

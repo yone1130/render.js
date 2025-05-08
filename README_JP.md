@@ -84,4 +84,4 @@ npm run build
 
 [MIT License](./LICENSE) のもとでライセンスされます。
 
-Copyright (C) 2025 よね/Yone
+Copyright &copy; 2025 よね/Yone
