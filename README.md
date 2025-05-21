@@ -16,12 +16,6 @@ URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js
 import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js';
 ```
 
-or
-
-```html
-<script src="https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js"></script>
-```
-
 ### 2. Use
 
 A sample code:
