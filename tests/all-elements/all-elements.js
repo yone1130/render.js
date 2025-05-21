@@ -10,11 +10,17 @@
  * 
  */
 
-import { Render } from '../../dist/render.js';
+let Render;
+const root = document.getElementById("root");
+
+try {
+    Render = await import('../../dist/render.js');
+} catch (error) {
+    root.innerText = `Error: Could not import the render.js package. Please build the project first.\n${error.stack}`;
+}
 
 
 const render = new Render();
-const root = document.getElementById("root");
 const allButton = document.getElementById("allButton");
 const loopButton = document.getElementById("loopButton");
 
