@@ -12,16 +12,13 @@
 
 import { ElementOptions } from "./types/element-options.js";
 
-
 export class RenderElement {
     options: ElementOptions;
     element?: HTMLElement;
 
-
     constructor(options: ElementOptions) {
         this.options = options;
     }
-
 
     _create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
         this.element = document.createElement(tagName);
