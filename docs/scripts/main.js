@@ -122,7 +122,7 @@ function notFound() {
 
 async function examples() {
     if (!("examples" in pages)) {
-        let _examples = await import('/scripts/pages/examples.mjs');
+        let _examples = await import('/scripts/pages/examples.js');
         pages.examples = _examples.examples;
     }
 
