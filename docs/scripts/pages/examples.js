@@ -175,7 +175,7 @@ function home() {
                 textContent: "Home",
             }),
             render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
@@ -194,7 +194,7 @@ function demos() {
                 textContent: "Demos",
             }),
             render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
@@ -213,7 +213,7 @@ function menu() {
                 textContent: "Menu",
             }),
             render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Comming soon.",
+                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
