@@ -47,18 +47,22 @@ class CounterPage {
 
     build() {
         const countValue = this.count.state;
+        const incrementCount = () => this.count.setState(countValue + 1);
+        const decrementCount = () => this.count.setState(countValue - 1);
 
         return [
             this.render.$div({
-                textContent: `Count: ${countValue}`,
                 children: [
+                    this.render.$p({
+                        textContent: `Count: ${countValue}`,
+                    }),
                     this.render.$button({
                         textContent: "Increment",
-                        onClick: () => this.count.setState(countValue + 1),
+                        onClick: incrementCount,
                     }),
                     this.render.$button({
                         textContent: "Decrement",
-                        onClick: () => this.count.setState(countValue - 1),
+                        onClick: decrementCount,
                     }),
                 ],
             })
