@@ -14,8 +14,10 @@ let Render;
 const root = document.getElementById("root");
 
 try {
-    Render = await import('../../dist/render.js');
+    const { Render: ImportedRender } = await import('../../dist/render.js');
+    Render = ImportedRender;
 } catch (error) {
+    console.error(error);
     root.innerText = `Error: Could not import the render.js package. Please build the project first.\n${error.stack}`;
 }
 
