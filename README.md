@@ -10,16 +10,16 @@
 
 ### 1. Import from CDN
 
-URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs
+URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js
 
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs';
+import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js';
 ```
 
 or
 
 ```html
-<script src="https://cdn.yoneyo.com/scripts/render/render-v1.0.0.mjs"></script>
+<script src="https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js"></script>
 ```
 
 ### 2. Use
@@ -84,4 +84,4 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 Licensed under the [MIT License](./LICENSE).
 
-Copyright (C) 2025 よね/Yone
+Copyright &copy; 2025 よね/Yone

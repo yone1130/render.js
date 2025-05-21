@@ -1,4 +1,3 @@
-
 [> 日本語で読む](./README_JP.md)
 
 ## About this Directory
@@ -14,5 +13,6 @@ https://render-js.yoneyo.com/examples/
 
 | File | Description |
 |-------|--------|
-| hello-world.mjs | Display Hello World. |
-| navigation.mjs | Implementation of navigation (screen transition). |
+| hello-world.js | Display `Hello World`. |
+| counter.js | Provide counter |
+<!-- | navigation.js | Implementation of navigation (screen transition). | -->
