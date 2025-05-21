@@ -10,9 +10,9 @@
  * 
  */
 
-import { RenderElement } from "./element.mjs";
-import { ElementOptions } from "./types/element-options.mjs";
-import { RenderArguments } from "./types/render-arguments.mjs";
+import { RenderElement } from "./element.js";
+import { ElementOptions } from "./types/element-options.js";
+import { RenderArguments } from "./types/render-arguments.js";
 import { Version } from "version";
 
 

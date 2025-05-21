@@ -10,7 +10,7 @@
  * 
  */
 
-import { ElementOptions } from "./types/element-options.mjs";
+import { ElementOptions } from "./types/element-options.js";
 
 
 export class RenderElement {
