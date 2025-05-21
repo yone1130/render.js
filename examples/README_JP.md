@@ -13,5 +13,6 @@ https://render-js.yoneyo.com/examples/
 
 | ファイル | 説明 |
 |-------|--------|
-| hello-world.mjs | `Hello World` を表示。 |
-| navigate.mjs | ナビゲーション (画面推移) の実装。 |
+| hello-world.js | `Hello World` を表示。 |
+| counter.js | カウンターの実装 |
+<!-- | navigate.js | ナビゲーション (画面推移) の実装。 | -->
