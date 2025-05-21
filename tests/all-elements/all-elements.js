@@ -62,129 +62,125 @@ function buildLoop() {
 function component() {
     return render.$div({
         id: "app",
-        children: (() => {
-            let a = [
-                render.$div({
-                    id: "test_id_div",
-                    className: "test_class",
-                    onClick: () => console.debug("Clicked Div."),
-                    textContent: "[div]",
-                    // innerHTML: "<span>[div-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[div-children]",
-                        }),
-                    ],
-                }),
-                render.$span({
-                    id: "test_id_span",
-                    className: "test_class",
-                    textContent: "[span]",
-                    // innerHTML: "<span>[span-innerHTML]</span>",
-                }),
-                render.$section({
-                    id: "test_setion",
-                    className: "test_class",
-                    onClick: () => console.debug("Clicked Section."),
-                    textContent: "[section]",
-                    // innerHTML: "<span>[section-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[section-children]",
-                        }),
-                    ],
-                }),
-                render.$img({
-                    id: "test_id_img",
-                    className: "test_class",
-                    src: "https://cdn.yoneyo.com/images/yone-logos/yone_icon.png",
-                    alt: "Image's alt.",
-                    width: 64,
-                    height: 64,
-                }),
-                render.$button({
-                    id: "test_id_button",
-                    className: "test_class",
-                    onClick: () => console.debug("Clicked Button."),
-                    textContent: "[button]",
-                    // innerHTML: "<span>[button-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[button-children]",
-                        }),
-                    ],
-                }),
-                render.$nav({
-                    id: "test_id_nav",
-                    className: "test_class",
-                    // innerHTML: "<span>[nav-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[nav-children]",
-                        }),
-                    ],
-                }),
-                render.$ul({
-                    id: "test_id_ul",
-                    className: "test_class",
-                    // innerHTML: "<span>[ul-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[ul-children]",
-                        }),
-                    ],
-                }),
-                render.$li({
-                    id: "test_id_li",
-                    className: "test_class",
-                    textContent: "[li]",
-                    // innerHTML: "<span>[li-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[li-children]",
-                        }),
-                    ],
-                }),
-                render.$h1({
-                    id: "test_id_h1",
-                    className: "test_class",
-                    onClick: () => console.debug("Clicked H1."),
-                    textContent: "[h1]",
-                    // innerHTML: "<span>[h1-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[h1-children]",
-                        }),
-                    ],
-                }),
-                render.$p({
-                    id: "test_id_p",
-                    className: "test_class",
-                    onClick: () => console.debug("Clicked P."),
-                    textContent: "[p]",
-                    // innerHTML: "<span>[p-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[p-children]",
-                        }),
-                    ],
-                }),
-                render.$a({
-                    id: "test_id_a",
-                    className: "test_class",
-                    href: "#",
-                    onClick: () => console.debug("Clicked A."),
-                    textContent: "[a]",
-                    // innerHTML: "<span>[a-innerHTML]</span>",
-                    children: [
-                        render.$span({
-                            textContent: "[a-children]",
-                        }),
-                    ],
-                }),
-            ]
-
-            return a;
-        })(),
-    })
+        children: [
+            render.$div({
+                id: "test_id_div",
+                className: "test_class",
+                onClick: () => console.debug("Clicked Div."),
+                textContent: "[div]",
+                // innerHTML: "<span>[div-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[div-children]",
+                    }),
+                ],
+            }),
+            render.$span({
+                id: "test_id_span",
+                className: "test_class",
+                textContent: "[span]",
+                // innerHTML: "<span>[span-innerHTML]</span>",
+            }),
+            render.$section({
+                id: "test_setion",
+                className: "test_class",
+                onClick: () => console.debug("Clicked Section."),
+                textContent: "[section]",
+                // innerHTML: "<span>[section-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[section-children]",
+                    }),
+                ],
+            }),
+            render.$img({
+                id: "test_id_img",
+                className: "test_class",
+                src: "https://cdn.yoneyo.com/images/yone-logos/yone_icon.png",
+                alt: "Image's alt.",
+                width: 64,
+                height: 64,
+            }),
+            render.$button({
+                id: "test_id_button",
+                className: "test_class",
+                onClick: () => console.debug("Clicked Button."),
+                textContent: "[button]",
+                // innerHTML: "<span>[button-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[button-children]",
+                    }),
+                ],
+            }),
+            render.$nav({
+                id: "test_id_nav",
+                className: "test_class",
+                // innerHTML: "<span>[nav-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[nav-children]",
+                    }),
+                ],
+            }),
+            render.$ul({
+                id: "test_id_ul",
+                className: "test_class",
+                // innerHTML: "<span>[ul-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[ul-children]",
+                    }),
+                ],
+            }),
+            render.$li({
+                id: "test_id_li",
+                className: "test_class",
+                textContent: "[li]",
+                // innerHTML: "<span>[li-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[li-children]",
+                    }),
+                ],
+            }),
+            render.$h1({
+                id: "test_id_h1",
+                className: "test_class",
+                onClick: () => console.debug("Clicked H1."),
+                textContent: "[h1]",
+                // innerHTML: "<span>[h1-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[h1-children]",
+                    }),
+                ],
+            }),
+            render.$p({
+                id: "test_id_p",
+                className: "test_class",
+                onClick: () => console.debug("Clicked P."),
+                textContent: "[p]",
+                // innerHTML: "<span>[p-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[p-children]",
+                    }),
+                ],
+            }),
+            render.$a({
+                id: "test_id_a",
+                className: "test_class",
+                href: "#",
+                onClick: () => console.debug("Clicked A."),
+                textContent: "[a]",
+                // innerHTML: "<span>[a-innerHTML]</span>",
+                children: [
+                    render.$span({
+                        textContent: "[a-children]",
+                    }),
+                ],
+            }),
+        ],
+    });
 }
