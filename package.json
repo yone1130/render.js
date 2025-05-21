@@ -12,7 +12,7 @@
         "url": "https://github.com/yone1130/render.js/issues"
     },
     "homepage": "https://render-js.yoneyo.com",
-    "main": "./src/render.mjs",
+    "main": "./src/render.js",
     "scripts": {
         "build": "tsc",
         "start-docs": "http-server ./docs -p 3000",
@@ -27,6 +27,6 @@
     },
     "type": "module",
     "exports": {
-        "import": "./src/render.mjs"
+        "import": "./src/render.js"
     }
 }
