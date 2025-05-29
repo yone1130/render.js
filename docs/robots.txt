@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://render-js.yoneyo.com/sitemap.xml
