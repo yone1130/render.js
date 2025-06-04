@@ -19,7 +19,6 @@ export class Button extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("button");
-        return element;
+        return this._create("button");
     }
 }

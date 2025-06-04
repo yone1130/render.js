@@ -19,7 +19,6 @@ export class H5 extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("h5");
-        return element;
+        return this._create("h5");
     }
 }

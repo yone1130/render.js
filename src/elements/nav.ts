@@ -19,7 +19,6 @@ export class Nav extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("nav");
-        return element;
+        return this._create("nav");
     }
 }

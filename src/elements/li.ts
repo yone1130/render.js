@@ -19,7 +19,6 @@ export class Li extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("li");
-        return element;
+        return this._create("li");
     }
 }

@@ -19,7 +19,6 @@ export class Section extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("section");
-        return element;
+        return this._create("section");
     }
 }

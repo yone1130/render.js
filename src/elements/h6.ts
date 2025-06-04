@@ -19,7 +19,6 @@ export class H6 extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("h6");
-        return element;
+        return this._create("h6");
     }
 }

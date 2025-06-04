@@ -19,7 +19,6 @@ export class Ul extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("ul");
-        return element;
+        return this._create("ul");
     }
 }

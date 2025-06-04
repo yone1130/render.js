@@ -19,7 +19,6 @@ export class P extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("p");
-        return element;
+        return this._create("p");
     }
 }

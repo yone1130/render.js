@@ -19,7 +19,6 @@ export class H3 extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("h3");
-        return element;
+        return this._create("h3");
     }
 }

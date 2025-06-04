@@ -19,7 +19,6 @@ export class Image extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("img");
-        return element;
+        return this._create("img");
     }
 }

@@ -19,7 +19,6 @@ export class Div extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("div");
-        return element;
+        return this._create("div");
     }
 }
