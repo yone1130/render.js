@@ -10,7 +10,6 @@
  * 
  */
 
-import { RenderElement } from "./element.js";
 import { ElementOptions } from "./types/element-options.js";
 import { RenderArguments } from "./types/render-arguments.js";
 import { Version } from "version";
