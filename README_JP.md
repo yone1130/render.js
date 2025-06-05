@@ -1,5 +1,7 @@
 # render.js
 
+[![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+
 [> Read in English](./README.md)
 
 ## Overview
