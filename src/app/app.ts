@@ -11,7 +11,7 @@
  */
 
 import { RenderComponent } from "../component/component.js";
-import { Render, RenderElement, RenderElements } from "../render.js";
+import { Render, RenderElement } from "../render.js";
 import { RenderAppModel } from "./app.model.js";
 
 export abstract class RenderApp implements RenderAppModel {
@@ -25,7 +25,7 @@ export abstract class RenderApp implements RenderAppModel {
 
     build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement> {
         let builtChildren: Array<HTMLElement> = [];
-        
+
         children.forEach((child) => {
             if (child instanceof RenderComponent) {
                 builtChildren.push(...child.build({ children: [] }));

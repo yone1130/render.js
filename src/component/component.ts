@@ -10,7 +10,7 @@
  * 
  */
 
-import { Render, RenderElement, RenderElements } from "../render.js";
+import { Render, RenderElement } from "../render.js";
 import { RenderComponentModel } from "./component.model.js";
 
 export abstract class RenderComponent implements RenderComponentModel {
@@ -24,7 +24,7 @@ export abstract class RenderComponent implements RenderComponentModel {
 
     build({ children }: { children: Array<HTMLElement> }): Array<HTMLElement> {
         let builtChildren: Array<HTMLElement> = [];
-        
+
         children.forEach((child) => {
             if (child instanceof RenderComponent) {
                 builtChildren.push(...child.build({ children: [] }));
