@@ -10,10 +10,11 @@
  * 
  */
 
-import { ElementOptions } from "./types/element-options.js";
+import { Version } from "version";
+
 import { RenderArguments } from "./types/render-arguments.js";
 import { RunappArguments } from "./types/runapp-arguments.js";
-import { Version } from "version";
+import { ElementOptions } from "./types/element-options.js";
 
 import { RenderApp } from "./app/app.js";
 import { RenderComponent } from "./component/component.js";
