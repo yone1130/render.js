@@ -10,7 +10,7 @@
  * 
  */
 
-import { Render, RenderApp } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
 
 class GreetingElement extends RenderComponent {
     constructor() {
