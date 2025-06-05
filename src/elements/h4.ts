@@ -10,7 +10,7 @@
  * 
  */
 
-import { RenderElement } from "../element.js";
+import { RenderElement } from "./element.js";
 import { ElementOptions } from "../types/element-options.js";
 
 export class H4 extends RenderElement {
