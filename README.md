@@ -10,19 +10,11 @@
 
 ## Usage
 
-### 1. Import from CDN
-
-URL: https://cdn.yoneyo.com/scripts/render@1.0.0/render.js
-
-```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-```
-
-### 2. Use
-
 Example code (with App Creator):
 ```js
-class GreetingElement extends RenderComponent {
+import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
+class Greeting extends RenderComponent {
     constructor() {
         super();
         this.title = "render.js";
@@ -53,7 +45,7 @@ class MyApp extends RenderApp {
     build() {
         return super.build({
             children: [
-                new GreetingElement(),
+                new Greeting(),
             ]
         });
     }
@@ -69,6 +61,8 @@ render.runApp({
 
 or just rendering (with Builder):
 ```js
+import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
 const render = new Render();
 const root = document.getElementById("root");
 

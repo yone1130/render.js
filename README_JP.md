@@ -10,19 +10,11 @@
 
 ## 利用方法
 
-### 1. CDNからインポートする
-
-URL: https://cdn.yoneyo.com/scripts/render@1.0.0/render.js
-
-```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-```
-
-### 2. 使う
-
 コード例 (App Creator):
 ```js
-class GreetingElement extends RenderComponent {
+import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
+class Greeting extends RenderComponent {
     constructor() {
         super();
         this.title = "render.js";
@@ -53,7 +45,7 @@ class MyApp extends RenderApp {
     build() {
         return super.build({
             children: [
-                new GreetingElement(),
+                new Greeting(),
             ]
         });
     }
@@ -69,12 +61,14 @@ render.runApp({
 
 またはレンダリングのみ (Builder):
 ```js
+import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
 const render = new Render();
 const root = document.getElementById("root");
 
-const app = () => {
-    let title = "render.js";
-    let message = "Hello World";
+function app() {
+    const title = "render.js";
+    const message = "Hello World";
 
     return [
         render.$div({
