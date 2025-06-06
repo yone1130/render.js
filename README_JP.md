@@ -20,7 +20,54 @@ import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
 
 ### 2. 使う
 
-サンプルコード:
+コード例 (App Creator):
+```js
+class GreetingElement extends RenderComponent {
+    constructor() {
+        super();
+        this.title = "render.js";
+        this.message = "Hello World";
+    }
+
+    build() {
+        const { $h1, $p } = this.render;
+
+        return super.build({
+            children: [
+                $h1({
+                    id: "title",
+                    textContent: this.title,
+                }),
+                $p({
+                    id: "message",
+                    textContent: this.message,
+                }),
+            ]
+        });
+    }
+}
+
+class MyApp extends RenderApp {
+    constructor() { super(); }
+
+    build() {
+        return super.build({
+            children: [
+                new GreetingElement(),
+            ]
+        });
+    }
+}
+
+const render = new Render();
+
+render.runApp({
+    root: document.body,
+    app: new MyApp(),
+});
+```
+
+またはレンダリングのみ (Builder):
 ```js
 const render = new Render();
 const root = document.getElementById("root");
@@ -52,13 +99,16 @@ render.build({
 });
 ```
 
+### サンプルコード
+
+- **サンプルコード: [examples/](./examples/).**
+
 ### リソース
 
 - **ドキュメント: https://render-js.yoneyo.com/ .**
 - **ウェブデモ: https://render-js.yoneyo.com/examples/ .**
-- **サンプルコード: [examples/](./examples/).**
 
-## ビルド
+## 開発
 
 ### 1. パッケージをインストールする
 
