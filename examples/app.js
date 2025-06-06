@@ -12,7 +12,7 @@
 
 import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
 
-class GreetingElement extends RenderComponent {
+class Greeting extends RenderComponent {
     constructor() {
         super();
         this.title = "render.js";
@@ -43,15 +43,15 @@ class MyApp extends RenderApp {
     build() {
         return super.build({
             children: [
-                new GreetingElement(),
-                new GreetingElement(),
-                new GreetingElement(),
+                new Greeting(),
             ]
         });
     }
 }
 
-new Render().runApp({
+const render = new Render();
+
+render.runApp({
     root: document.body,
     app: new MyApp(),
 });
