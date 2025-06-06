@@ -10,7 +10,7 @@
  * 
  */
 
-import { ElementOptions } from "./types/element-options.js";
+import { ElementOptions } from "../types/element-options.js";
 
 export class RenderElement {
     options: ElementOptions;
@@ -63,6 +63,26 @@ export class RenderElement {
 
         if (this.options.onClick) {
             this.element.addEventListener("click", this.options.onClick);
+        }
+
+        if (Array.isArray(this.options.children) && this.options.children.every(child => child instanceof HTMLElement)) {
+            this.element.append(...this.options.children);
+        }
+
+        return this.element;
+    }
+
+    _createCustomElement(tagName: string): HTMLElement {
+        this.element = document.createElement(tagName);
+
+        if (typeof this.options.id === "string") {
+            this.element.id = this.options.id;
+        }
+
+        if (typeof this.options.className === "string") {
+            this.element.className = `render-element ${this.options.className}`;
+        } else {
+            this.element.className = "render-element";
         }
 
         if (Array.isArray(this.options.children) && this.options.children.every(child => child instanceof HTMLElement)) {

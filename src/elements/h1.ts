@@ -10,7 +10,7 @@
  * 
  */
 
-import { RenderElement } from "../element.js";
+import { RenderElement } from "./element.js";
 import { ElementOptions } from "../types/element-options.js";
 
 export class H1 extends RenderElement {
@@ -19,7 +19,6 @@ export class H1 extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("h1");
-        return element;
+        return this._create("h1");
     }
 }

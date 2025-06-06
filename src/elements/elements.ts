@@ -27,21 +27,23 @@ import { Section } from "./section.js";
 import { Span } from "./span.js";
 import { Ul } from "./ul.js";
 
-export {
-    A,
-    Button,
-    Div,
-    H1,
-    H2,
-    H3,
-    H4,
-    H5,
-    H6,
-    Image,
-    Li,
-    Nav,
-    P,
-    Section,
-    Span,
-    Ul,
-};
+abstract class RenderElements {
+    static A = A;
+    static Button = Button;
+    static Div = Div;
+    static H1 = H1;
+    static H2 = H2;
+    static H3 = H3;
+    static H4 = H4;
+    static H5 = H5;
+    static H6 = H6;
+    static Image = Image;
+    static Li = Li;
+    static Nav = Nav;
+    static P = P
+    static Section = Section;
+    static Span = Span;
+    static Ul = Ul;
+}
+
+export { RenderElements };
