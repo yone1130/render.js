@@ -1,0 +1,57 @@
+/**!
+ * 
+ * render.js
+ * 
+ * Copyright (C) 2025 よね/Yone
+ * 
+ * Licensed under the MIT License.
+ * 
+ * https://github.com/yone1130/render.js
+ * 
+ */
+
+import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
+class Greeting extends RenderComponent {
+    constructor() {
+        super();
+        this.title = "render.js";
+        this.message = "Hello World";
+    }
+
+    build() {
+        const { $h1, $p } = this.render;
+
+        return super.build({
+            children: [
+                $h1({
+                    id: "title",
+                    textContent: this.title,
+                }),
+                $p({
+                    id: "message",
+                    textContent: this.message,
+                }),
+            ]
+        });
+    }
+}
+
+class MyApp extends RenderApp {
+    constructor() { super(); }
+
+    build() {
+        return super.build({
+            children: [
+                new Greeting(),
+            ]
+        });
+    }
+}
+
+const render = new Render();
+
+render.runApp({
+    root: document.body,
+    app: new MyApp(),
+});

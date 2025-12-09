@@ -1,5 +1,7 @@
 # render.js
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+
 [> 日本語で読む](./README_JP.md)
 
 ## Overview
@@ -8,24 +10,65 @@
 
 ## Usage
 
-### 1. Import from CDN
-
-URL: https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js
-
+Example code (with App Creator):
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render/render-v1.0.0.js';
+import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
+class Greeting extends RenderComponent {
+    constructor() {
+        super();
+        this.title = "render.js";
+        this.message = "Hello World";
+    }
+
+    build() {
+        const { $h1, $p } = this.render;
+
+        return super.build({
+            children: [
+                $h1({
+                    id: "title",
+                    textContent: this.title,
+                }),
+                $p({
+                    id: "message",
+                    textContent: this.message,
+                }),
+            ]
+        });
+    }
+}
+
+class MyApp extends RenderApp {
+    constructor() { super(); }
+
+    build() {
+        return super.build({
+            children: [
+                new Greeting(),
+            ]
+        });
+    }
+}
+
+const render = new Render();
+
+render.runApp({
+    root: document.body,
+    app: new MyApp(),
+});
 ```
 
-### 2. Use
-
-A sample code:
+or just rendering (with Builder):
 ```js
+import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+
 const render = new Render();
 const root = document.getElementById("root");
 
-const app = () => {
-    let title = "render.js";
-    let message = "Hello World";
+function app() {
+    const title = "render.js";
+    const message = "Hello World";
 
     return [
         render.$div({
@@ -50,13 +93,16 @@ render.build({
 });
 ```
 
-### More Resources
+### Example codes
+
+- **Example codes: [examples/](./examples/).**
+
+### Resources
 
 - **Documents: https://render-js.yoneyo.com/ .**
 - **Demos: https://render-js.yoneyo.com/examples/ .**
-- **Example codes: [examples/](./examples/).**
 
-## Build
+## Development
 
 ### 1. Install Packages
 

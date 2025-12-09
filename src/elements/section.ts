@@ -10,7 +10,7 @@
  * 
  */
 
-import { RenderElement } from "../element.js";
+import { RenderElement } from "./element.js";
 import { ElementOptions } from "../types/element-options.js";
 
 export class Section extends RenderElement {
@@ -19,7 +19,6 @@ export class Section extends RenderElement {
     }
 
     create(): HTMLElement {
-        const element: HTMLElement = this._create("section");
-        return element;
+        return this._create("section");
     }
 }
