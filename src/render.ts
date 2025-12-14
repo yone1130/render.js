@@ -39,20 +39,48 @@ class Render {
         root.append(...children);
     }
 
-    // ---
-    // Elements
-    // ---
-
     $a(options: ElementOptions): HTMLElement {
         return new RenderElements.A(options).create();
+    }
+
+    $article(options: ElementOptions): HTMLElement {
+        return new RenderElements.Article(options).create();
+    }
+
+    $aside(options: ElementOptions): HTMLElement {
+        return new RenderElements.Aside(options).create();
+    }
+
+    $base(options: ElementOptions): HTMLElement {
+        return new RenderElements.Base(options).create();
+    }
+
+    $body(options: ElementOptions): HTMLElement {
+        return new RenderElements.Body(options).create();
     }
 
     $button(options: ElementOptions): HTMLElement {
         return new RenderElements.Button(options).create();
     }
 
+    $code(options: ElementOptions): HTMLElement {
+        return new RenderElements.Code(options).create();
+    }
+
+    $dialog(options: ElementOptions): HTMLElement {
+        return new RenderElements.Dialog(options).create();
+    }
+
     $div(options: ElementOptions): HTMLElement {
         return new RenderElements.Div(options).create();
+    }
+
+    $footer(options: ElementOptions): HTMLElement {
+        return new RenderElements.Footer(options).create();
+    }
+
+    $form(options: ElementOptions): HTMLElement {
+        return new RenderElements.Form(options).create();
     }
 
     $h1(options: ElementOptions): HTMLElement {
@@ -79,6 +107,18 @@ class Render {
         return new RenderElements.H6(options).create();
     }
 
+    $head(options: ElementOptions): HTMLElement {
+        return new RenderElements.Head(options).create();
+    }
+
+    $header(options: ElementOptions): HTMLElement {
+        return new RenderElements.Header(options).create();
+    }
+
+    $html(options: ElementOptions): HTMLElement {
+        return new RenderElements.Html(options).create();
+    }
+
     $img(options: ElementOptions): HTMLElement {
         return new RenderElements.Image(options).create();
     }
@@ -87,12 +127,36 @@ class Render {
         return new RenderElements.Li(options).create();
     }
 
+    $link(options: ElementOptions): HTMLElement {
+        return new RenderElements.Link(options).create();
+    }
+
+    $main(options: ElementOptions): HTMLElement {
+        return new RenderElements.Main(options).create();
+    }
+
+    $meta(options: ElementOptions): HTMLElement {
+        return new RenderElements.Meta(options).create();
+    }
+
     $nav(options: ElementOptions): HTMLElement {
         return new RenderElements.Nav(options).create();
     }
 
+    $ol(options: ElementOptions): HTMLElement {
+        return new RenderElements.Ol(options).create();
+    }
+
     $p(options: ElementOptions): HTMLElement {
         return new RenderElements.P(options).create();
+    }
+
+    $script(options: ElementOptions): HTMLElement {
+        return new RenderElements.Script(options).create();
+    }
+
+    $search(options: ElementOptions): HTMLElement {
+        return new RenderElements.Search(options).create();
     }
 
     $section(options: ElementOptions): HTMLElement {
@@ -101,6 +165,18 @@ class Render {
 
     $span(options: ElementOptions): HTMLElement {
         return new RenderElements.Span(options).create();
+    }
+
+    $strong(options: ElementOptions): HTMLElement {
+        return new RenderElements.Strong(options).create();
+    }
+
+    $style(options: ElementOptions): HTMLElement {
+        return new RenderElements.Style(options).create();
+    }
+
+    $title(options: ElementOptions): HTMLElement {
+        return new RenderElements.Title(options).create();
     }
 
     $ul(options: ElementOptions): HTMLElement {
