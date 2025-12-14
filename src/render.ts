@@ -23,7 +23,7 @@ import { RenderElements } from "./elements/elements.js";
 
 class Render {
     constructor() {
-        this.version = new Version(1, 0, 0, Version.levels.dev);
+        this.version = new Version(1, 0, 0, Version.levels.beta);
     }
 
     version: Version;
