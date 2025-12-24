@@ -1,6 +1,6 @@
 {
     "name": "render.js",
-    "version": "0.0.0",
+    "version": "1.0.0.beta",
     "description": "A library of rendering HTML elements for TypeScript and JavaScript.",
     "author": "よね/Yone",
     "license": "MIT",
