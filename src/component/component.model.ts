@@ -15,5 +15,6 @@ import { Render } from "../render.js";
 export interface RenderComponentModel {
     id: string;
     render: Render;
-    build({ children }: { children: Array<HTMLElement> }): Array<HTMLElement>;
+    rendering(): void;
+    build({ children, ref }: { children: Array<HTMLElement>, ref?: { nowrapper?: boolean } }): Array<HTMLElement>;
 }
