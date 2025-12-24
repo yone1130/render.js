@@ -14,34 +14,56 @@ import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scrip
 
 class Greeting extends RenderComponent {
     constructor() {
-        super();
-        this.title = "render.js";
-        this.message = "Hello World";
+        super("greeting");
+        this.#title = "render.js";
+        this.#message = "Hello World! with App Creator.";
     }
 
-    build() {
+    /**
+     * @param {{ ref: * }}
+     * @returns {HTMLElement[]}
+     */
+    build({ ref }) {
         const { $h1, $p } = this.render;
 
         return super.build({
+            ref: ref,
             children: [
                 $h1({
                     id: "title",
-                    textContent: this.title,
+                    textContent: this.#title,
                 }),
                 $p({
                     id: "message",
-                    textContent: this.message,
+                    textContent: this.#message,
                 }),
             ]
         });
     }
+
+    /**
+     * @type {string}
+     */
+    #title;
+
+    /**
+     * @type {string}
+     */
+    #message;
 }
 
 class MyApp extends RenderApp {
-    constructor() { super(); }
+    constructor() {
+        super();
+    }
 
-    build() {
+    /**
+     * @param {{ ref: * }}
+     * @returns {HTMLElement[]}
+     */
+    build({ ref }) {
         return super.build({
+            ref: ref,
             children: [
                 new Greeting(),
             ]
@@ -49,6 +71,9 @@ class MyApp extends RenderApp {
     }
 }
 
+/**
+ * @type {Render}
+ */
 const render = new Render();
 
 render.runApp({
