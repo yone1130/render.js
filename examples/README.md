@@ -9,10 +9,11 @@ Example codes of **render.js**.
 You can use demos on web:
 https://render-js.yoneyo.com/examples/
 
-## Files
+## Directories
 
-| File | Description |
-|-------|--------|
-| hello-world.js | Display `Hello World`. |
-| counter.js | Provide counter |
+| Name | Description |
+| - | - |
+| hello-world | Display `Hello World`. |
+| counter | Provide counter |
+| app | App Creation |
 <!-- | navigation.js | Implementation of navigation (screen transition). | -->
