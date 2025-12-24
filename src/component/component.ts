@@ -14,7 +14,11 @@ import { Render, RenderElement } from "../render.js";
 import { RenderComponentModel } from "./component.model.js";
 
 export abstract class RenderComponent implements RenderComponentModel {
-    constructor(id: string) {
+    constructor({
+        id,
+    }: {
+        id: string;
+    }) {
         this.id = id;
         this.render = new Render();
     }

@@ -15,7 +15,11 @@ import { Render, RenderElement } from "../render.js";
 import { RenderAppModel } from "./app.model.js";
 
 export abstract class RenderApp implements RenderAppModel {
-    constructor(id: string) {
+    constructor({
+        id,
+    }: {
+        id: string;
+    }) {
         this.id = id;
         this.render = new Render();
     }
