@@ -12,24 +12,19 @@
 
 import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
 
-
-const render = new Render();
-const root = document.getElementById("root");
-
-
-const app = () => {
-    let title = "render.js";
-    let message = "Hello World";
+function app({ title, message }) {
+    const { $div, $h1, $p } = render;
 
     return [
-        render.$div({
+        $div({
             id: "app",
+            className: "app",
             children: [
-                render.$h1({
+                $h1({
                     id: "title",
                     textContent: title,
                 }),
-                render.$p({
+                $p({
                     id: "message",
                     textContent: message,
                 }),
@@ -38,8 +33,12 @@ const app = () => {
     ];
 };
 
+const render = new Render();
 
 render.build({
-    target: root,
-    children: app(),
+    target: document.body,
+    children: app({
+        title: "render.js",
+        message: "Hello World!",
+    }),
 });
