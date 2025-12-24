@@ -20,11 +20,11 @@ export abstract class RenderApp implements RenderAppModel {
     }: {
         id?: string | null;
     }) {
-        this.id = id;
+        this.id = id ?? null;
         this.render = new Render();
     }
 
-    id?: string | null;
+    id: string | null;
     render: Render;
 
     build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement> {

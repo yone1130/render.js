@@ -14,7 +14,7 @@ import { RenderComponent } from "../component/component.js";
 import { Render } from "../render.js";
 
 export interface RenderAppModel {
-    id?: string | null;
+    id: string | null;
     render: Render;
     build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement>;
 }
