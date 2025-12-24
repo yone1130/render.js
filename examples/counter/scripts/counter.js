@@ -14,7 +14,9 @@ import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scrip
 
 class CounterPage extends RenderComponent {
     constructor() {
-        super("counter");
+        super({
+            id: "counter",
+        });
     }
 
     get count() {

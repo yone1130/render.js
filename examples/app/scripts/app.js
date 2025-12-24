@@ -14,7 +14,10 @@ import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scrip
 
 class Greeting extends RenderComponent {
     constructor() {
-        super("greeting");
+        super({
+            id: "greeting",
+        });
+
         this.#title = "render.js";
         this.#message = "Hello World! with App Creator.";
     }
