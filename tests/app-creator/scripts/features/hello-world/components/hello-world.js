@@ -14,9 +14,7 @@ import { RenderComponent } from '../../../../../../dist/render.js';
 
 export class HelloWorld extends RenderComponent {
     constructor() {
-        super({
-            id: "HelloWorld",
-        });
+        super();
     }
 
     get count() {

@@ -15,9 +15,7 @@ import { HelloWorld } from '../hello-world/components/hello-world.js';
 
 export class App extends RenderApp {
     constructor() {
-        super({
-            id: "App",
-        });
+        super();
     }
 
     build() {
