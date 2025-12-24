@@ -17,13 +17,13 @@ export abstract class RenderComponent implements RenderComponentModel {
     constructor({
         id,
     }: {
-        id: string;
+        id?: string | null;
     }) {
-        this.id = id;
+        this.id = id ?? null;
         this.render = new Render();
     }
 
-    id: string;
+    id: string | null;
     render: Render;
 
     rendering(): void {
@@ -71,17 +71,17 @@ export abstract class RenderComponent implements RenderComponentModel {
             return builtChildren;
         }
 
+        this.element = new RenderElement({
+            id: this.id,
+            children: builtChildren,
+        })._createCustomElement("render-component")
+
         return [
-            new RenderElement({
-                id: this.id,
-                children: builtChildren,
-            })._createCustomElement("render-component"),
+            this.element,
         ];
     };
 
     private renderChildren: Array<HTMLElement> = [];
 
-    private get element(): HTMLElement | null {
-        return document.getElementById(this.id);
-    }
+    private element?: HTMLElement;
 }

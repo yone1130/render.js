@@ -11,7 +11,7 @@
  */
 
 export interface ElementOptions {
-    id?: string;
+    id?: string | null;
     className?: string;
     href?: string | URL;
     src?: string | URL;

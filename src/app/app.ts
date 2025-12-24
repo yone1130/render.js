@@ -18,13 +18,13 @@ export abstract class RenderApp implements RenderAppModel {
     constructor({
         id,
     }: {
-        id: string;
+        id?: string | null;
     }) {
         this.id = id;
         this.render = new Render();
     }
 
-    id: string;
+    id?: string | null;
     render: Render;
 
     build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement> {

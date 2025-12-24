@@ -13,7 +13,7 @@
 import { Render } from "../render.js";
 
 export interface RenderComponentModel {
-    id: string;
+    id: string | null;
     render: Render;
     rendering(): void;
     build({ children, ref }: { children: Array<HTMLElement>, ref?: { nowrapper?: boolean } }): Array<HTMLElement>;
