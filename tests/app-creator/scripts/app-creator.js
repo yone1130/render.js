@@ -18,7 +18,7 @@ class TestAppCreator {
     }
 
     async main() {
-        const { Render, RenderApp, RenderComponent } = await this.#importRender();
+        const { Render } = await this.#importRender();
         this.render = new Render();
         this.rendering();
     }
