@@ -19,7 +19,7 @@ export abstract class RenderApp implements RenderAppModel {
         id,
     }: {
         id?: string | null;
-    }) {
+    } = {}) {
         this.id = id ?? null;
         this.render = new Render();
     }

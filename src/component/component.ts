@@ -17,8 +17,8 @@ export abstract class RenderComponent implements RenderComponentModel {
     constructor({
         id,
     }: {
-        id?: string | null;
-    }) {
+        id?: string | null,
+    } = {}) {
         this.id = id ?? null;
         this.render = new Render();
     }
@@ -60,7 +60,7 @@ export abstract class RenderComponent implements RenderComponentModel {
             }
 
             if (child instanceof RenderComponent) {
-                builtChildren.push(...child.build({ children: [], ref: { nowrapper: ref?.nowrapper } }));
+                builtChildren.push(...child.build({ children: [], ref: ref }));
                 return;
             }
 
