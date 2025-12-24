@@ -10,23 +10,16 @@
  * 
  */
 
-let Render;
+import { Interval } from './core/interval/interval.js';
+
 const root = document.getElementById("root");
-
-try {
-    const { Render: ImportedRender } = await import('../../dist/render.js');
-    Render = ImportedRender;
-} catch (error) {
-    console.error(error);
-    root.innerText = `Error: Could not import the render.js package. Please build the project first.\n${error.stack}`;
-}
-
+const { Render } = await importRender();
 
 const render = new Render();
 const allButton = document.getElementById("allButton");
 const loopButton = document.getElementById("loopButton");
 
-let renderingInterval = null;
+const renderingInterval = new Interval({ interval: null });
 
 allButton.addEventListener("click", () => {
     build();
@@ -34,11 +27,11 @@ allButton.addEventListener("click", () => {
 
 
 loopButton.addEventListener("click", () => {
-    if (renderingInterval === null) {
+    if (renderingInterval.interval === null) {
         loopButton.textContent = "Stop the Loop";
-    } else if (typeof renderingInterval === "number") {
-        clearInterval(renderingInterval);
-        renderingInterval = null;
+    } else if (typeof renderingInterval.interval === "number") {
+        clearInterval(renderingInterval.interval);
+        renderingInterval.interval = null;
         root.innerHTML = "";
         loopButton.textContent = "Start Rendering Loop";
         return;
@@ -46,6 +39,20 @@ loopButton.addEventListener("click", () => {
     buildLoop();
 })
 
+
+async function importRender() {
+    try {
+        return await import('../../../dist/render.js');
+    } catch (error) {
+        onFailedImportRender(error);
+    }
+}
+
+
+function onFailedImportRender(error) {
+    root.textContent = "Error: Failed to import the render.js package. Please build the project first.";
+    throw new Error(`Error: Failed to import the render.js package. Please build the project first.: ${error}`);
+}
 
 function build() {
     render.build({
@@ -58,7 +65,7 @@ function build() {
 function buildLoop() {
     build();
 
-    renderingInterval = setInterval(() => {
+    renderingInterval.interval = setInterval(() => {
         root.innerHTML = "";
         setTimeout(() => {
             build();
