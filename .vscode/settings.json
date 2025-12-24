@@ -4,8 +4,8 @@
         When you run `/docs/`, you can use these settings.
         If not, they needs to be commented out.
     */
-    "livePreview.serverRoot": "/docs/",
-    "liveServer.settings.root": "/docs/",
+    // "livePreview.serverRoot": "/docs/",
+    // "liveServer.settings.root": "/docs/",
     "liveServer.settings.file": "/",
 
     /*
@@ -13,6 +13,6 @@
         When you run `/tests/`, you can use these settings.
         If not, they needs to be commented out.
     */
-    // "livePreview.serverRoot": "/",
-    // "liveServer.settings.root": "/",
+    "livePreview.serverRoot": "/",
+    "liveServer.settings.root": "/",
 }

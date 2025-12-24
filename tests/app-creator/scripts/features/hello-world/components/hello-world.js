@@ -14,7 +14,9 @@ import { RenderComponent } from '../../../../../../dist/render.js';
 
 export class HelloWorld extends RenderComponent {
     constructor() {
-        super("HelloWorld");
+        super({
+            id: "HelloWorld",
+        });
     }
 
     get count() {
@@ -27,18 +29,11 @@ export class HelloWorld extends RenderComponent {
     }
 
     build({ ref }) {
-        const { $p, $span, $button, $style } = this.render;
+        const { $p, $span, $button } = this.render;
 
         return super.build({
             ref: ref,
             children: [
-                $style({
-                    textContent: (`
-                        #button {
-                            padding: 1rem;
-                        }
-                    `),
-                }),
                 $p({
                     children: [
                         $span({

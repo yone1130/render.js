@@ -11,11 +11,13 @@
  */
 
 import { RenderApp } from '../../../../../dist/render.js';
-import { HelloWorld } from './components/hello-world.js';
+import { HelloWorld } from '../hello-world/components/hello-world.js';
 
 export class App extends RenderApp {
     constructor() {
-        super("App");
+        super({
+            id: "App",
+        });
     }
 
     build() {
